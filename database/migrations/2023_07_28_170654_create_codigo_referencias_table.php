@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('codigo_referencias', function (Blueprint $table) {
             $table->id();
             $table->foreignId('ficha_id')->nullable()->constrained('fichas');
-            $table->char("dpto", 2);
-            $table->char("prov", 2);
-            $table->char("dist", 2);
-            $table->string("sector");
-            $table->string("manzana");
-            $table->string("lote");
-            $table->string("edifica");
-            $table->string("entrada");
-            $table->string("piso");
-            $table->string("unidad");
-            $table->string("dc");
+            $table->char("dpto", 2)->nullable();
+            $table->char("prov", 2)->nullable();
+            $table->char("dist", 2)->nullable();
+            $table->string("sector")->nullable();
+            $table->string("manzana")->nullable();
+            $table->string("lote")->nullable();
+            $table->string("edifica")->nullable();
+            $table->string("entrada")->nullable();
+            $table->string("piso")->nullable();
+            $table->string("unidad")->nullable();
+            $table->string("dc")->nullable();
             $table->timestamps();
         });
     }
